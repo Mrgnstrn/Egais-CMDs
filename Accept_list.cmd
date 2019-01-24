@@ -30,6 +30,6 @@ FOR /f "usebackq delims=" %%a IN (%TTNlist%) DO (
  		echo !LINE!>>Act_%%a.xml
 	)
 	curl -F "xml_file=@Act_%%a.xml" http://%UTMhost%:%UTMport%/opt/in/WayBillAct_v3
-	del /S /Q Act_%%a.xml>null
+	del /S /Q Act_%%a.xml>nul
 )
-pause>null
+pause>nul
